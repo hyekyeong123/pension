@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.cal {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50vw;
+    height: 60vh;
+    float: left;
+    margin-bottom: 100px;
+}
+.cal th,
+.cal td {
+    border: 1px solid black;
+    font-size:1.4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cal th:first-of-type,
+.cal td:first-of-type {
+    color: red;
+}
+.cal th:last-of-type,
+.cal td:last-of-type {
+    color: blue;
+}
+
+.cal-head {
+    text-align: center;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

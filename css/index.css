@@ -1,0 +1,242 @@
+header{
+    height: 80px;
+    background-color:rgba(255,255,255,0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+}
+/*-----------------------------------------------------------*/
+.cen1{
+    width: 1400px;
+}
+.cen2{
+    width: 1200px;
+}
+/*메인비주얼슬라이더*/
+/* //인피니트 슬라이더로 슬릭없이 */
+/* #visual{
+    position: relative;
+    overflow: auto;
+} */
+/* #visual{
+    position: relative;
+} */
+#vslider{
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* //높이 100%는 쓸모가 없음 */
+    overflow: hidden;
+    /* top: 0;
+    bottom: 0;
+    left:0;
+    right:0; */
+    /* 사용 못함, 다른것을 감싸주기 위해서는 relative가 필요한데 relative에는 저걸 써 봣자 쓸모가 없음 */
+}
+#vbus{
+    /* overflow: auto; */
+    /* //스크립트로 높이와 넓이를 잴거라서 overflow는 없어도 됨*/
+}
+.slide{
+    float: left;
+    overflow: hidden;
+    position: relative; 
+    /* 이미지를 감싸주고 버튼들을 감싸주기 위한 relative */
+    /* height: ; */
+}
+.slide img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    /* //가운데로 보내기 */
+}
+.fontbox{
+    position: absolute;
+    left:20%;
+    top:20%;
+    transform: translate(-20%,-20%);
+}
+/*  */
+.shortcut{
+    display: block;
+    background-color: rgba(255,255,255,0.8);
+    color:rgba(41,29,13,0.8);
+    width: calc(100% / 3);
+    height: 100px;
+    float: left;
+    position: absolute;
+    bottom:0;
+    font-size:1.3em;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    border-right:1px solid rgba(52, 52, 52, 0.2);
+}
+.map{
+    left:0;
+}
+.room{
+    left:33%;
+}
+.res{
+    left:66%;
+}
+#vslider h3{
+
+}
+#vslider p{
+    margin-top: 10px;
+}
+#vslider .fontbox{
+    background-color: rgba(255,255,255,0.8);
+    color:rgba(52, 52, 52, 0.8);
+    font-weight: bold;
+    letter-spacing: -1px;
+    padding:10px;
+    box-shadow: 2px 2px 2px #eb9e05;
+}
+/*-----------------dot--------------------------------*/
+.dot{
+    display: block;
+    position: absolute;
+    bottom:150px;
+    right: 30px;
+    background-color: white;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    border:1px solid #eb9e05;
+}
+.dot.active{
+    background-color: #eb9e05;
+}
+.dot:nth-of-type(1){
+    right: 90px;
+}
+.dot:nth-of-type(2){
+    right: 60px;
+}
+/*---------------------------------------------------------------*/
+#introduce{
+    background-color: #eb9e05;
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    word-break: keep-all;
+}
+#brand_introduce{
+    float: right;
+    width: 50%;
+    margin-top: 75px;
+    padding-right:5em;
+}
+#brand_introduce p:nth-of-type(1){
+    color:white;
+    font-weight: bold;
+    font-size:1.4em;
+    margin-bottom:1.5em;
+}
+#brand_introduce p:nth-of-type(2){
+    color:white;
+    font-weight: bold;
+    font-size:1.1em;
+}
+
+#logo{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+}
+/*---------------------------------backAttach-----------*/
+#backAttach1,#backAttach2,#backAttach3{
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#backAttach3{
+    background-image: url(../images/rena1.jpg);
+}
+#backAttach1{
+    margin-top:100px;
+    background-image: url(../images/room4_4.jpg);
+}
+#backAttach2{
+    background-image: url(../images/spa5.jpg);
+}
+/*------------------------------------------*/
+#videobox{
+    margin-top: 100px;
+    text-align: center;
+}
+#video{
+    max-width: 1000px;
+    outline: none;
+    width: 100%;
+}
+/*---------------------------------------------------------*/
+#beautyPictureBox{
+    overflow: auto;
+    background-color: blanchedalmond;
+    text-align: center;
+    letter-spacing: -3px;
+    margin-top: 100px;
+    color:#333;
+    padding-top:20px;
+}
+#beautyPictureBox p{
+    font-size:0.9em;
+    padding-top:10px;
+    padding-bottom: 15px;
+}
+.gal img{
+    float: left;
+    width: 23%;
+    margin:1%;
+}
+#beautyPictureBox button{
+    background-color: #103163;
+    border:none;
+    /* padding:10px; */
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2%;
+    border:1px solid#021635;
+
+}
+#beautyPictureBox button:hover{
+    background-color:white;
+    color:#021635;
+    border:1px solid#021635;
+
+}
+/*--------------------------------------------------------*/
+/* #indexgal{
+    height: 800px;
+} */
+/*--------------------------------------------------------*/
+@media all and (max-width:900px){
+    #logo{
+        display: none;
+    }
+    #brand_introduce{
+        float: none;
+        width: 100%;
+        padding:20px;
+    }
+
+}
+/*500부터---------------------------------*/
+@media all and (max-width:500px){
+    #backAttach1,#backAttach2,#backAttach3{
+        height: 33vh;
+    }
+
+}

@@ -1,0 +1,189 @@
+
+#roomLeft{
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+}
+#roomLeft img{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width: 100%;
+}
+#roomLeft>button{
+    position: absolute;
+    top:120px;
+    left:20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color:#333;
+    width: 10vw;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+    font-size:0.9em;
+    font-weight: bold;
+}
+#roomLeft>button:hover{
+    background-color:#021635;
+    color:white;
+    /* border:2px solid#021635; */
+}
+
+/* #rommLeft a{
+    position: absolute;
+} */
+/*  */
+
+/*-------------슬라이더 스타일-------------------------------*/
+#vslider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/* #vslider h3{
+    position: absolute;
+    top:5vh;
+    left:5vw;
+    color:#021635;
+    z-index: 300;
+} */
+.slide{
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.slide img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.slide p{
+    position: absolute;
+    color:#021635;
+    font-size:3em;
+    font-weight: bold;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-shadow: 5px 5px 5px white;
+}
+.btn{
+    background-color: transparent;
+    outline: none;
+    border:none;
+    background-repeat: no-repeat;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 30%;
+}
+.prev{
+    background-image: url(../images/slider_btn_prev.png);   
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left:14%;
+    transform: translate(-14%, -50%);
+    
+}
+.next{
+    background-image: url(../images/slider_btn_next.png);
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left:90%;
+    transform: translate(-90%, -50%);
+}
+.goReservation{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    bottom:20vh;
+    right: 17vw;
+    background-color:rgba(255, 255, 255, 0.5);
+    color:#021635;
+    border:none;
+    outline: none;
+    font-size:0.9em;
+}
+.goReservation:hover{
+    background-color:#021635;
+    color:white;
+}
+/*---------------객실안내$("#AllroomAccont") 테이블----------------------*/
+
+#AllroomAccont h3{
+    text-align: center;
+    margin-top: 70px;
+}
+#AllroomAccont .table{
+    overflow: hidden;
+    margin: auto;
+    margin-top:10px;
+    margin-bottom: 70px;
+    width: 85%;
+    border-top:2px solid #021635;
+    border-bottom:2px solid #021635;
+    
+}
+#AllroomAccont .table li{
+    overflow: auto;
+    border-bottom: 1px solid #021635;
+}
+.th{
+    background-color: #80adf0;
+    overflow: auto;
+    line-height: 40px!important;
+    text-align: center;
+}
+.th span{
+    line-height: 40px!important;
+}
+#AllroomAccont .table span{
+    text-align: center;
+    overflow: auto;
+    line-height: 30px;
+}
+.table span{
+    display: block;
+    float: left;
+}
+.one1{
+    width: 13%;
+    text-align: left!important;
+    padding-left:1em;
+}
+.one2{
+    width: 10%;
+}
+.one3{
+    width: 12%;
+}
+.one4{
+    width: 10%;
+}
+.one5{
+    width: 10%;
+}
+.one6{
+    width: 10%;
+}
+.one7{
+    width: 28%;
+    text-align: left!important;
+    padding-left:20px;
+    
+}
+
+
+
+
+/*----------------------------------------------------------*/
+@media all and (max-width:){
+
+}

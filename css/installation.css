@@ -1,0 +1,195 @@
+#flexBox{
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin-bottom: 30px;     */
+}
+.flex{
+    width:calc(100vw / 3);
+    transition: all 0.5s;
+    position: relative;
+}
+.flex .ratiobox{
+    height: 100vh;
+}
+.flexhover{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:0;
+    /* background-color: #eb9e05; */
+    height: 30vh;
+    transition: all 0.01s;
+    /* //단순히 absolute로 숨겼다가 보이기가 힘들다. 숨길곳이 없음 */
+
+}
+.flexhover p{
+    color:white;
+    font-size:1.3em;
+    text-align: center;
+    margin-top:-5vh;
+}
+.flexhover button{
+    left:50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: rgba(255,255,255,0.8);
+    color:rgba(41,29,13,0.8);
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    bottom:25vh;
+    font-size:0.9em;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    border-right:1px solid rgba(52, 52, 52, 0.2);
+}
+.flexhover img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 18vh;
+    left:50%;
+    transform: translateX(-50%) rotate(-90deg);
+    filter: invert(100);
+    opacity: 60%;
+}
+.flexhover button:hover{
+    background-color: #eb9e05;
+}
+/*----------------------------------------------*/
+.tabcont{
+    outline: none;
+    overflow: hidden;
+    width: 100vw;
+}
+.tabcont1 .ratiobox,.tabcont2 .ratiobox{
+    float: left;
+    width: 50vw;
+    height: 50vh;
+}
+.tabcont1 h4, .tabcont2 h4{
+    text-align: center;
+    font-size:1.5em;
+    
+}
+.tabcont1 .tabcontfontbox,.tabcont2 .tabcontfontbox{
+    width: 45vw;
+    float: right;
+    /* margin-top:10px; */
+    margin-right: 20px;
+    margin-top:25vh;
+}
+/*-----------------tabcont2번째 스타일링------------------------*/
+.tabcont2 h4{
+    margin-bottom:20px;
+}
+.tabcont2 p{
+    margin-bottom:40px;
+}
+/*------------------tabcont3번째 스타일링------------------------*/
+.tabcont3 .tabcontfontbox{
+    width: 50%;
+    float:right;
+    padding:20px;
+}
+.tabcont3>div>img{
+    width: 100vw;
+}
+.tabcont3 .tabcontfontbox+img{
+    float: left;
+    width:50%;
+    padding:20px;
+}
+/* .tabcont3 .tabcontfontbox img{
+    width: 50%;
+    float:left;
+} */
+/* 마저하기 */
+/*-------------------------------------------------------------*/
+
+.left-arrowbox{
+    display: none;
+}
+/*---------------------------------------------------------------*/
+@media all and (max-width:1000px){
+    .flexhover button{
+        width: 140px;
+    }
+    .flexhover p{
+        font-size:0.95em;
+    }
+}
+@media all and (max-width:770px){
+    .list-blue .li-num{
+        width:20px;
+        height: 18px;
+        line-height: 18px;
+        font-size:0.9em;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .list-blue .li-txt{
+        background-color: white;
+        padding-left:0px;
+        padding-top:0px;
+        padding-bottom: 0px;
+        min-height: 30px;
+    }
+    .list-blue>li{
+        border-bottom: 1px solid #f8f8f8;
+    }
+    /*------------------------------------------------------------------*/
+    .tabcont1 .ratiobox, .tabcont2 .ratiobox{
+        float: none;
+        width: 100vw;
+        height: 50vh;
+    }
+    .tabcont1 .tabcontfontbox,.tabcont2 .tabcontfontbox{
+        width: 100vw;
+        float: none;
+        margin-top:100px;
+        margin-right: 20px;
+        padding:0px 20px;
+    }
+/*-------------------------------------------------------*/
+    .tabcont3 .tabcontfontbox{
+        width: 100%;
+        float:none;
+        padding:20px;
+    }
+    .tabcont3 .tabcontfontbox+img{
+        float: none;
+        width:100%;
+        padding:0px;
+    }
+    .tabcont3 .aaa{
+        margin-top: 100px;
+    }
+}
+@media all and (max-width:600px){
+    #flexBox{
+        display:none;
+    }
+    .left-arrowbox{
+        display: block;
+        overflow: hidden;
+    }
+    .left-arrowbox img{
+        width:50px;
+        height: 50px;
+        margin-left: 85%;
+        transform: rotate(180deg);
+    }
+    .left-arrowbox p{
+        margin-left: 85%;
+        font-size:0.7em;
+    }
+    h4{
+        margin: 0;
+    }
+    .tabcontfontbox{
+        margin-top:10px!important;
+    }
+
+}

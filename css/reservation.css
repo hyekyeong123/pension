@@ -1,0 +1,101 @@
+.tabcont{
+    border: 2px solid #eb9e05;
+    padding:10px;
+    overflow: auto;
+}
+
+.float-right{
+    float: left;
+}
+/*-------------------*/
+
+
+/*----------------------------------------------------*/
+#go_reservation{
+    background-color: #eb9e05;
+    clear: both;
+    width: 80%;
+    margin: auto;
+
+    /* margin-top: 100px; */
+    
+    
+    overflow: auto;
+    vertical-align: middle;
+}
+#go_reservation .ratiobox{
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin: 10px 30px 10px 10px;
+}
+#go_reservation div{
+    margin-right: 10px;;
+    float: left;
+    line-height: 120px;
+}
+/*-------------------------------------------------------------*/
+#termbox{
+    float: left;
+    width: 150px;
+    height: 100px;
+    line-height: 120px;
+}
+#usernumbox{
+    float: left;
+    width: 150px;
+    height: 100px;
+    line-height: 120px;
+}
+#usernum{
+    width: 70px;
+}
+/*  */
+#go,#pluse{
+    font-size:0.9em;
+    font-weight: bold;
+    border-radius:3px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #103163;
+    color:white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#pluse{
+   float: right;
+}
+#basic{
+    clear: both;
+    margin-top: 70px;
+}
+#note{
+    margin-top: 70px;
+}
+#refund{
+    margin-top: 70px;
+}
+/*----------------------------------------------------------------*/
+@media all and (max-width:770px){
+    .list-blue .li-num{
+        width:20px;
+        height: 18px;
+        line-height: 18px;
+        font-size:0.9em;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .list-blue .li-txt{
+        background-color: white;
+        padding-left:0px;
+        padding-top:0px;
+        padding-bottom: 0px;
+        min-height: 30px;
+    }
+    .list-blue>li{
+        border-bottom: 1px solid #f8f8f8;
+    }
+}

@@ -1,0 +1,50 @@
+/* //모든 탭의 디자인을 통일하자 */
+.tabbtnbox{
+    overflow: auto;
+    width: 100%;
+}
+.tabbtn{
+    width: 20%;
+    height: 40px;
+    font-size:1em;
+    font-weight: bold;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color:#021635;
+    color:white;
+    float: left;
+}
+.tabbtn:hover{
+    background-color: #eb9e05;
+    color:#021635;
+}
+.tabcont{
+    overflow: auto;
+    border: 2px solid #eb9e05;
+    padding:10px;
+    outline: none;
+}
+.tabactive{
+    background-color: white;
+    color:#021635;
+    border:2px solid #eb9e05;
+    border-bottom: none;
+    position: relative;
+}
+.tabactive::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    bottom: -2px;
+    z-index: 10;
+}
+.tabcont{
+    padding:0 10px;
+}
+/* .tabcontBox{
+    overflow: hidden;
+} */

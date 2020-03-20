@@ -1,0 +1,14 @@
+#navybtn{
+    background-color: #021635;
+    border:none;
+    padding:10px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2%;
+}
+#navybtn:hover{
+    background-color:white;
+    color:#021635;
+    border:1px solid#021635;
+}

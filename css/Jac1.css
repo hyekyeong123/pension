@@ -1,0 +1,373 @@
+h2{
+    margin-top: 70px;
+    text-align: center;
+    font-size:2em;
+    margin-bottom: 30px;
+}
+.galbox{
+    /* margin: 0px 10px; */
+    overflow: auto;
+    border: 2px solid #eb9e05;
+    padding:10px;
+}
+
+.galcont{
+    float: left;
+    width: calc((100% - 80px) / 4);
+
+    /* //안에 있는 것들이 모두 앱솔루트라 높이를 지정해줘야함 */
+    height: 250px;
+    
+    margin: 10px 10px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+.galcont img{
+    display: block;
+    /* position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0; */
+    width: 100%;
+}
+.galcont:hover .hovercont{
+    display: block;
+}
+.hovercont{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    text-align: center;
+}
+.hovercont p{
+    margin-top: 25%;
+    color:white;
+}
+/*--------------------------------------------------------*/
+.tabbtnbox{
+    /* background-color: #eb9e05; */
+    /* background: linear-gradient(to right,#eb9e05,#ffebcd ); */
+    width: 60vw;
+    height: 50px;
+    margin-top: 100px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+.tabbtn1,.tabbtn2,.tabbtn3 {
+    font-size:1.2em;
+    font-weight: bold;
+    border-radius:10px 10px 0 0;
+    display: inline-block;
+    width: 20vw;
+    float: left;
+    height: 50px;
+    background-color: #eb9e05;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.tabactive{
+    background-color: white;
+    border:2px solid #eb9e05;
+    border-bottom: none;
+    height: 50px;
+    position: relative;
+}
+.tabactive::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    bottom: -2px;
+    z-index: 10;
+}
+.tabbtn3:hover{
+   background-color: #103163;
+   color:#eb9e05;
+}
+.tabbtn2:hover{
+    background-color: #103163;
+    color:#eb9e05;
+}
+.tabbtn1:hover{
+    background-color: #103163;
+    color:#eb9e05;
+}
+.tabactive:hover{
+    background-color: white;
+    color:#333;
+}
+/*----------------------------------------------------*/
+.tabcont{
+    padding:0 10px;
+}
+/* .tabcont2, .tabcont3{
+    margin: 0px 10px;
+    overflow: auto;
+}
+*/
+.tabcontBox{
+    overflow: hidden;
+}
+
+
+/*-------------------두번째 탭콘트---------------------------------------------------*/
+.travelbox{
+    margin-bottom: 70px;
+    overflow: auto;
+    box-shadow: 10px 10px #eb9e05;
+    margin-right: 20px;
+    border: 1px solid sandybrown;
+    padding:10px 15px;
+    /* width:100%; */
+}
+/* //홀수번째는 사진이 왼쪽정렬, 짝수번째는 사진이 오른쪽정렬 */
+/* 대전 엑스포, 자전거길, 성심담이 홀수 */
+/* 오월드, 으능정이, 한밭수목원이 짝수 */
+
+.travelbox:nth-of-type(odd) .travelboxImgBox{
+    float: left;
+}
+.travelbox:nth-of-type(odd) .travelboxTextbox{
+    float: right;
+}
+/*  */
+.travelbox:nth-of-type(even) .travelboxImgBox{
+    float: right;
+     
+}
+.travelbox:nth-of-type(even) .travelboxTextbox{
+    float: left;
+    
+}
+/*---------------------------------*/
+.travelboxImgBox{
+    width: 50vw;
+    overflow: auto;
+    position: relative;
+} 
+
+/*----------------.ratiobox 사용하기*/
+.ImgBox img{
+    z-index: 10000;
+}
+.ImgBox{
+    height: 250px;
+    width: 23vw;
+    float: left;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.ImgBox:hover .ImgBoxHoverBox{
+    display: block;
+}
+/* .ImgBox:hover .ImgBox img{
+    transform: scale(1.2);
+}  */
+.ImgBoxHoverBox{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    text-align: center;
+    z-index: 15000;
+}
+.ImgBoxHoverBox p{
+    position: absolute;
+    top: 80%;
+    left:50%;
+    transform: translateX(-50%);
+    color:white;
+    z-index: 18000;
+    font-weight: bold;
+    /* word-break: keep-all; */
+    white-space: nowrap;
+}
+
+/*--------------------------------------------------*/
+.travelboxImgBox img{
+    display: block;
+    /* height: 300px; */
+    width: 50%;
+    float: left;
+     
+}
+
+.travelboxTextbox{
+    width: 40vw;
+    padding:15px;
+    overflow: auto;
+
+}
+.travelboxTextbox h3{
+    font-size: 2.3em;
+    margin-bottom: 15px;
+    color:#333;
+}
+.travelboxTextbox p{
+    /* display: inline-block; */
+    font-size:1.1em;
+    color:#333;
+    margin-bottom: 7px;
+
+}
+.travelboxTextbox p:not(:first-of-type){
+    font-size:1.2em;
+    font-weight: bold;
+}
+/*-------------------------------------------오시는 길----------------------*/
+#map{
+    background-color: #eb9e05;
+    width: 100%;
+    height: 500px;
+}
+#mapAccount{
+    border-top:2px solid #eb9e05;
+    margin-top: 100px;
+    width: 100%;
+    height: 210px;
+    background-color:aliceblue;
+    /* padding:10px 30px; */
+    border-bottom:2px solid #eb9e05;
+}
+#mapAccount li{
+    display: block;
+    height: 70px;
+    border-bottom:1px solid #103163;
+    line-height: 70px;
+}
+#mapAccount li:last-of-type{
+    border-bottom:none;
+}
+#mapAccount span{
+    width: 10%;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-right:20px solid white;
+}
+#mapAccount p{
+    width: 85%;
+    float: left;
+    padding-left:15px;
+    /* display: inline-block; */
+}
+.tabcont3 .cen2{
+    margin: auto;
+}
+.tabcont{
+    outline: none;
+}
+
+
+/*--------------------------------------------------------*/
+@media all and (max-width:1150px){
+    .travelboxTextbox{
+        float: none;
+        width: 100%;
+    }
+    .travelboxTextbox h3{
+        font-size: 1.7em;
+    }
+    .travelboxTextbox p{
+        font-size:1em;
+    }
+    /*  */
+    .travelboxImgBox{
+        float: none;
+        width: 100%;
+    }
+    .ImgBox{
+        height: 250px;
+        width: 44vw;
+        float: left;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .travelbox{
+        margin-bottom: 30px;
+        overflow: auto;
+        /* box-shadow: 10px 10px #eb9e05; */
+        margin-right: 0px;
+        /* border: 1px solid sandybrown; */
+        padding:10px 15px;
+        /* width:100%; */
+    }
+}
+/*---------------------------------------------------------------------------*/
+
+
+@media all and (max-width:950px){
+    .galcont{
+        width: calc((100% - 40px) / 2);
+    }
+}
+/**/
+@media all and (max-width:775px){
+    .ImgBox{
+        height: 150px;
+        width: 38vw;
+        float: left;
+        cursor: pointer;
+    }
+}
+/*--------------------------------------------------------------------*/
+@media all and (max-width:700px){
+    .tabbtn1,.tabbtn2,.tabbtn3 {
+        font-size:1em;
+    }
+}
+/*  */
+@media all and (max-width:500px){
+    .galbox{
+        margin: 0px 0px;
+    }
+    .galcont{
+        width: calc((100% - 20px));
+    }
+/*  */
+    .ImgBoxHoverBox p{
+        position: absolute;
+        top: 80%;
+        left:50%;
+        transform: translateX(-50%);
+        color:white;
+        z-index: 18000;
+        font-weight: bold;
+        /* word-break: keep-all; */
+        white-space: nowrap;
+        font-size:0.7em;
+    }
+}
+/*--------------------------------------------------------*/
+@media all and (max-width:475px){
+    .ImgBox{
+        height: 150px;
+        width: 70vw;
+        /* float: left; */
+        cursor: pointer;
+        margin-left: 5vw;
+    }
+    .travelboxTextbox h3{
+        font-size: 1.3em;
+    }
+    .travelboxTextbox p{
+        font-size:0.8em;
+    }
+    .travelboxTextbox p:not(:first-of-type){
+        font-size:0.9em;
+        font-weight: bold;
+    }
+}
